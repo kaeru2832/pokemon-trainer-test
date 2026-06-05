@@ -102,7 +102,7 @@ export default function ResultClient({ type, matchType, rivalType }: Props) {
           </p>
 
           {/* Keywords */}
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2 pb-2">
             {type.keywords.map((kw) => (
               <span
                 key={kw}
