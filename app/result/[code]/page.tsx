@@ -47,6 +47,7 @@ export async function generateMetadata({
       description,
       images: [{ url: imageUrl, width: 475, height: 475 }],
       type: "website",
+      url: `https://poke.ddiruk.com/result/${code}/`,
     },
     twitter: {
       card: "summary_large_image",
