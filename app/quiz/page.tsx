@@ -89,9 +89,15 @@ export default function QuizPage() {
 
         {/* Question Card */}
         <div key={current.id} className="poke-card p-6 mb-6 animate-fadeInUp">
-          <p className="text-xs text-gray-400 mb-2 font-medium">
-            최대 {current.maxSelect}개 선택
-          </p>
+          <div className="flex items-center gap-2 mb-3">
+            <span
+              className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold text-white"
+              style={{ background: "#3B82F6" }}
+            >
+              <span>💡</span>
+              이 질문은 최대 {current.maxSelect}개까지 선택할 수 있어요
+            </span>
+          </div>
           <h2 className="text-lg md:text-xl font-bold leading-snug mb-6">
             {current.text}
           </h2>
