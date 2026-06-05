@@ -130,6 +130,15 @@ body {
   animation: pokeball-spin 1.2s linear infinite;
 }
 
+@keyframes pokeball-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
+
+.pokeball-bounce {
+  animation: pokeball-bounce 1.4s ease-in-out infinite;
+}
+
 .trainer-silhouette {
   filter: drop-shadow(0 8px 24px rgba(204,0,0,0.15));
 }

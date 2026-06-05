@@ -22,7 +22,7 @@ export default function HomePage() {
         </p>
 
         {/* 몬스터볼 */}
-        <div className="mb-10 flex justify-center">
+        <div className="mb-10 flex justify-center pokeball-bounce">
           <Pokeball />
         </div>
 
@@ -50,8 +50,8 @@ export default function HomePage() {
 function Pokeball() {
   return (
     <svg
-      width="200"
-      height="200"
+      width="240"
+      height="240"
       viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
