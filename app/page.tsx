@@ -8,10 +8,6 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
       <div className="max-w-lg w-full text-center animate-fadeInUp">
-        {/* 포켓볼 아이콘 */}
-        <div className="mb-8 flex justify-center">
-          <PokeballIcon />
-        </div>
 
         <h1 className="text-3xl md:text-4xl font-black mb-3 leading-tight" style={{ color: "#CC0000" }}>
           당신은 어떤
@@ -25,9 +21,9 @@ export default function HomePage() {
           1·2세대 포켓몬 32종 중 나와 가장 닮은 포켓몬은?
         </p>
 
-        {/* 트레이너 실루엣 */}
+        {/* 몬스터볼 */}
         <div className="mb-10 flex justify-center">
-          <TrainerSilhouette />
+          <Pokeball />
         </div>
 
         <button
@@ -51,48 +47,30 @@ export default function HomePage() {
   );
 }
 
-function PokeballIcon() {
-  return (
-    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="36" cy="36" r="34" stroke="#CC0000" strokeWidth="4" fill="white"/>
-      <path d="M2 36 Q2 4 36 4 Q70 4 70 36" fill="#CC0000"/>
-      <rect x="2" y="33" width="68" height="6" fill="#333"/>
-      <circle cx="36" cy="36" r="10" fill="white" stroke="#333" strokeWidth="4"/>
-      <circle cx="36" cy="36" r="5" fill="white" stroke="#666" strokeWidth="2"/>
-    </svg>
-  );
-}
-
-function TrainerSilhouette() {
+function Pokeball() {
   return (
     <svg
-      className="trainer-silhouette"
-      width="180"
-      height="220"
-      viewBox="0 0 180 220"
+      width="200"
+      height="200"
+      viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ filter: "drop-shadow(0 8px 32px rgba(204,0,0,0.25))" }}
     >
-      {/* 머리 */}
-      <ellipse cx="90" cy="42" rx="28" ry="30" fill="#CC0000" opacity="0.85"/>
-      {/* 모자 */}
-      <rect x="62" y="18" width="56" height="10" rx="5" fill="#8B0000"/>
-      <rect x="55" y="24" width="70" height="6" rx="3" fill="#8B0000"/>
-      {/* 몸통 */}
-      <rect x="62" y="72" width="56" height="64" rx="12" fill="#CC0000" opacity="0.85"/>
-      {/* 왼팔 */}
-      <rect x="38" y="74" width="24" height="48" rx="12" fill="#CC0000" opacity="0.75"/>
-      {/* 오른팔 (올린 팔) */}
-      <rect x="118" y="56" width="24" height="48" rx="12" fill="#CC0000" opacity="0.75" transform="rotate(-30 130 80)"/>
-      {/* 왼다리 */}
-      <rect x="65" y="132" width="22" height="56" rx="11" fill="#8B0000" opacity="0.85"/>
-      {/* 오른다리 */}
-      <rect x="93" y="132" width="22" height="56" rx="11" fill="#8B0000" opacity="0.85"/>
-      {/* 포켓볼 (손에 든) */}
-      <circle cx="148" cy="60" r="13" fill="white" stroke="#333" strokeWidth="2"/>
-      <path d="M135 60 Q135 47 148 47 Q161 47 161 60" fill="#CC0000"/>
-      <rect x="135" y="58" width="26" height="4" fill="#333"/>
-      <circle cx="148" cy="60" r="5" fill="white" stroke="#333" strokeWidth="2"/>
+      {/* 위쪽 빨간 반구 */}
+      <path d="M10 100 A90 90 0 0 1 190 100 Z" fill="#CC0000" />
+      {/* 아래쪽 흰 반구 */}
+      <path d="M10 100 A90 90 0 0 0 190 100 Z" fill="white" />
+      {/* 외곽 원 */}
+      <circle cx="100" cy="100" r="90" stroke="#1a1a1a" strokeWidth="8" fill="none" />
+      {/* 가운데 가로선 */}
+      <line x1="10" y1="100" x2="190" y2="100" stroke="#1a1a1a" strokeWidth="8" />
+      {/* 중앙 버튼 외부 흰 원 */}
+      <circle cx="100" cy="100" r="26" fill="white" stroke="#1a1a1a" strokeWidth="8" />
+      {/* 중앙 버튼 내부 흰 원 */}
+      <circle cx="100" cy="100" r="14" fill="white" stroke="#888" strokeWidth="3" />
+      {/* 빛 반사 하이라이트 */}
+      <ellipse cx="72" cy="62" rx="14" ry="9" fill="white" opacity="0.35" transform="rotate(-30 72 62)" />
     </svg>
   );
 }
